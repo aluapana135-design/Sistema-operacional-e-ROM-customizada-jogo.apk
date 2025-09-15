@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROM name="MeuLayoutAzulBranco" version="0.1">
+    <SystemInfo>
+        <Name>Sistema AzulBranco</Name>
+        <Author>Enzo</Author>
+        <CreationDate>2025-09-14</CreationDate>
+    </SystemInfo>
+
+    <Interface type="Graphical" orientation="landscape"> <!-- Definindo a orientação paisagem -->
+        <Theme>
+            <BackgroundColor value="#0000FF"/> <!-- Azul -->
+            <TextColor value="#FFFFFF"/> <!-- Branco -->
+            <AccentColor value="#ADD8E6"/> <!-- Um azul mais claro para detalhes, opcional -->
+        </Theme>
+
+        <Window id="main_panel" title="Interface Personalizada" width="100%" height="100%"> <!-- Janela que preenche tudo -->
+            <Panel id="header" height="80px" background_color="#0000FF" text_color="#FFFFFF"> <!-- Barra superior azul -->
+                <Label text="Meu OS - Azul e Branco" font_size="24pt" font_weight="bold" align="center" vertical_align="center"/>
+            </Panel>
+
+            <Panel id="content_area" height="calc(100% - 80px)" background_color="#FFFFFF" text_color="#000000"> <!-- Área de conteúdo branco -->
+                <Label text="Bem-vindo ao meu sistema operacional!" font_size="18pt" position_x="50" position_y="50"/>
+                <Label text="Aqui você pode criar e codificar." font_size="14pt" position_x="50" position_y="100"/>
+
+                <!-- Podemos adicionar mais elementos aqui, como botões, menus -->
+                <Button id="btn_action_1" text="Criar Algo" background_color="#ADD8E6" text_color="#0000FF" position_x="50" position_y="150" onClick="handle_create_action"/>
+                <Button id="btn_settings" text="Configurações" background_color="#FFFFFF" text_color="#0000FF" border_color="#0000FF" position_x="200" position_y="150" onClick="handle_settings"/>
+
+            </Panel>
+        </Window>
+    </Interface>
+
+    <CoreFunctions>
+        <Function name="handle_create_action" action="new_project"/>
+        <Function name="handle_settings" action="open_settings_panel"/>
+        <Function name="exit_system" action="shutdown"/> <!-- Função de sair, caso precise -->
+    </CoreFunctions>
+</ROM>
