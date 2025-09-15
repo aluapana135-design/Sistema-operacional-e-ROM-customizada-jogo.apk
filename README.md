@@ -1,0 +1,1 @@
+# Sistema-operacional-e-ROM-customizada-jogo.apk
